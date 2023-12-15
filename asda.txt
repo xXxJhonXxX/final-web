@@ -1,0 +1,24 @@
+<div class="column">
+			<img src="./img/cactus.png" alt="Cactus">
+				<p>Cactus</p>
+		</div>
+
+		<div class="column">
+			<img src="./img/calathea-pintripe-omata.png" alt="Calathea Pintripe Omata">
+				<p>Calathea Pintripe Omata</p>
+		</div>
+
+		<div class="column">
+			<img src="./img/Citronella.png" alt="Citronella">
+				<p>Citronella</p>
+		</div>
+
+		<div class="column">
+			<img src="./img/dwarf-sunflower.png" alt="Dwarf Sunflower">
+				<p>Dwarf Sunflower</p>
+		</div>
+
+		<div class="column">
+			<img src="./img/Gotu-Kola.png" alt="Gotu Kola">
+				<p>Gotu Kola</p>
+		</div>

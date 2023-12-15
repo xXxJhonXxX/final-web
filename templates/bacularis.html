@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='aloe-vera.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='BuyModal.css') }}">
+</head>
+<body>
+
+    <nav>
+		<label class="logo" >Inventory</label>
+		<ul>
+			<li><a class="active" href="{{url_for('home')}}">Home</a></li>
+			<li><a href="{{url_for('history')}}">History</a></li>
+	
+        </ul>
+	</nav>
+
+    <div class="border">
+        <div class="img-border">
+            <a href="{{url_for('static', filename='img/bacularis.png')}}"><img src="{{url_for('static', filename='img/bacularis.png')}}" alt="Bacularis"> </a>
+        </div>
+        <div class="details-pos">
+        <h1 class="name">Bacularis</h1>
+        <p class="price">₱179</p> 
+        <button type="button" id="buyModal">Buy</button>
+        </div>
+    </div>
+    
+    <div class="details-border">
+    <h3>Backgrounds</h3>
+    <ul>
+        <li>Sansevieria Bacularis is a perennial stemless succulent plant native to west-central tropical Africa. This Snake Plant grows tall and thin cylindrical dark green leaves. If grown with sufficient amount of light Sansevieria Bacularis will produce white flowers. An arrangement of leaf cuttings potted together in a pot is referred to as Sansevieria Bacularis Mikado</li>
+    </div>
+
+    <div class=" instruction-border">
+    <h3>Instruction</h3>
+    <ol>
+        <li>Sansevieria Bacularis does not need direct sunlight to thrive, it can grow healthy with medium indirect light. But it can also tolerate light conditions with a few hours of direct sunlight on a daily basis.</li>
+        <li>Sansevieria Bacularis can tolerate very low light, as low as 50 lux. It will live in low light, but it will not thrive under those light conditions. In low light new growth will be small and leggy and the leaves will be etiolated (stretched). For a healthy and good looking Snake Plant, aim for medium indirect light (light over 750 lux).</li>
+        <li>Water Sansevieria Bacularis once the soil is fully dry, all the way to the bottom of the pot. To check the soil, stick a chopstick inside it, push it gently all the way down, and pull it out. If the chopstick comes out dry, with no soil attached to it, it’s time to water. If the chopstick comes out wet or dirty, with soil attached, this means the soil is still wet and you should hold off with watering. If you’re unsure, wait another week. With Snake plants, it’s always better to go on the side of underwatering. They are drought-tolerant and can survive even a few months without water if needed.</li>
+        <li>The optimal humidity for Sansevieria Bacularis is between 5% and 25%. However, this Snake plant adapts well to any humidity level. Even if the humidity in your home is over 70%, your plant will do just fine.</li>
+    </ol> 
+    
+    </div>
+
+    <div class="youtube-pos">
+        <iframe width="400" height="250" src="https://www.youtube.com/embed/xxNRazXCoqU?si=VEzWvfgiRqhwd85R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <div class="google-pos">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d61957.82742933799!2d121.56122864330978!3d13.93690637462608!3m2!1i1024!2i768!4f13.1!2m1!1sany%20plant%20shop%20in%20lucena!5e0!3m2!1sen!2sph!4v1702214863820!5m2!1sen!2sph" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
+
+
+
+
+
+    <!----------------------Modal--------------------------->
+
+    
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+      
+          <form action="/submit_form" method="post">
+                <h2>Information</h2>
+                <br>
+              <label for="name">Name</label>
+              <input type="text"  name="name" id="name" required>
+              <br><br>
+              <label for="number">Number</label>
+              <input type="text"  name="number" id="number" required>
+              <br><br>
+              <label for="email">Email</label>
+              <input type="text"  name="email" id="email" required>
+              <br><br>  
+              <label for="plant">Plant</label>
+              <br>
+              <input type="text"  name="plant" id="plant" required readonly>
+              <br><br>
+              <label for="price">Price</label>
+              <br>
+              <input type="text"  name="price" id="price" required readonly>
+              <br> <br>
+              <label for="address">Address</label>
+              <input type="text"  name="address" id="address" >
+            
+              <br><br>
+              <button type="submit" id="submitModal" class="modalBtn">Submit</button>
+        </form>
+      
+        </div>
+      
+      </div>
+
+      
+    
+      <script src="{{url_for('static', filename='BuyModal.js')}}"></script>
+      
+</body>
+</html>

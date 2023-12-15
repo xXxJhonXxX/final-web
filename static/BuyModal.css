@@ -1,0 +1,53 @@
+
+body{
+    color: green;
+  }
+  .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      margin-top: 200px;
+      margin-left: 500px;
+      top: 0;
+      overflow: auto; /* Enable scroll if needed */
+    }
+  
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+    
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  
+    form{
+      padding: 15px;
+
+    }
+  
+    .modalBtn{
+      width: 150px;
+      height: 30px;
+      margin-left: 15px;
+      background-color: green;
+      color: white;
+    }
+  
+    h2{
+      color: green;
+    }

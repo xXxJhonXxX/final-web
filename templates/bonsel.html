@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='aloe-vera.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='BuyModal.css') }}">
+</head>
+<body>
+
+    <nav>
+		<label class="logo" >Inventory</label>
+		<ul>
+			<li><a class="active" href="{{url_for('home')}}">Home</a></li>
+			<li><a href="{{url_for('history')}}">History</a></li>
+	
+        </ul>
+	</nav>
+
+    <div class="border">
+        <div class="img-border">
+            <a href="{{url_for('static', filename='img/baston-fern.png')}}"><img src="{{url_for('static', filename='img/baston-fern.png')}}" alt="Boston Fern"> </a>
+        </div>
+        <div class="details-pos">
+        <h1 class="name">Boncel</h1>
+        <p class="price">₱240</p> 
+        <button type="button" id="buyModal">Buy</button>
+        </div>
+    </div>
+    
+    <div class="details-border">
+    <h3>Backgrounds</h3>
+    <ul>
+        <li>Sansevieria boncel of the Asparagaceae family is a low-maintenance and compact plant that is a favorite for home or office decor. If you wish to grow this hassle-free and attractive plant then this is the guide that you should be reading right now.</li>
+        <li>It belongs to the plant family Asparagaceae, and the common names include the Spear Orchid, Fan Snake plant, Skyline Spear, Dwarf African Spear Plant, Starfish Sansevieria, and a few others, depending on where you are. </li>
+    </div>
+
+    <div class=" instruction-border">
+    <h3>Instruction</h3>
+    <ol>
+        <li>
+            As would be expected from most cacti, especially those from the Sansevieria family, the plant likes well-draining soil. The soil should preferably be loose, but it can grow in sandy soil. 
+            <br><br>
+            If you are potting or planting a Sansevieria boncel go for a cactus/succulent soil mix with a small amount of peat added. </li>
+        <li>Many people make the mistake of assuming that these plants want full sun. While they do like a lot of sun, harsh midday and afternoon sun could burn the leaves. Give them lots of light, but try to avoid full sun. 
+            <br><br>
+            If grown indoors, it should be positioned near a north-facing window or, at the very least, somewhere it gets a decent amount of light (4 to 6 hours is ideal). 
+            <br><br>
+            It can handle less light, but the plant will not have the same vibrant and dramatic leaf coloring. </li>
+        <li>
+            Place your fern outdoors in a warm, humid environment.[4] In many places, the summers are warm and humid enough to provide the perfect environment for a Boston fern. They do best in environments with humidity levels of at least 50 percent. If your daytime temperatures are between 65 to 75 degrees Fahrenheit (18 to 24 degrees Celsius), and your nighttime temperatures are between 55 and 65 degrees Fahrenheit (13 to 18 degrees Celsius), your Boston ferns will thrive outdoors.[5] You can place them on your porch or patio, and they should do well.
+            The cooler temperatures at night will help to prevent fungus from developing.</li>
+        <li>The last thing that you want is for the plant to remain in wet, soggy soil. Rather, let the soil dry completely between watering. Check the moisture level with your finger to see if the soil’s dry enough. </li>
+        <li>The Sansevieria Boncel is extremely hardy and can handle a range of temperatures. It does, however, not enjoy conditions below 50 degrees Fahrenheit (10 degrees Celsius). </li>
+    
+    </ol> 
+    
+    </div>
+
+    <div class="youtube-pos">
+        <<iframe width="400" height="250" src="https://www.youtube.com/embed/f3fVAxpnRk8?si=LyYRN4x6f-wrh14w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <div class="google-pos">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d61957.82742933799!2d121.56122864330978!3d13.93690637462608!3m2!1i1024!2i768!4f13.1!2m1!1sany%20plant%20shop%20in%20lucena!5e0!3m2!1sen!2sph!4v1702214863820!5m2!1sen!2sph" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
+
+
+
+
+
+    <!----------------------Modal--------------------------->
+
+    
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+      
+          <form action="/submit_form" method="post">
+                <h2>Information</h2>
+                <br>
+              <label for="name">Name</label>
+              <input type="text"  name="name" id="name" required>
+              <br><br>
+              <label for="number">Number</label>
+              <input type="text"  name="number" id="number" required>
+              <br><br>
+              <label for="email">Email</label>
+              <input type="text"  name="email" id="email" required>
+              <br><br>  
+              <label for="plant">Plant</label>
+              <br>
+              <input type="text"  name="plant" id="plant" required readonly>
+              <br><br>
+              <label for="price">Price</label>
+              <br>
+              <input type="text"  name="price" id="price" required readonly>
+              <br> <br>
+              <label for="address">Address</label>
+              <input type="text"  name="address" id="address" >
+            
+              <br><br>
+              <button type="submit" id="submitModal" class="modalBtn">Submit</button>
+        </form>
+      
+        </div>
+      
+      </div>
+
+      
+    
+      <script src="{{url_for('static', filename='BuyModal.js')}}"></script>
+      
+</body>
+</html>

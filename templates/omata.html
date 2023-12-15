@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='omata.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='BuyModal.css') }}">
+</head>
+<body>
+
+    <nav>
+		<label class="logo" >Inventory</label>
+		<ul>
+			<li><a class="active" href="{{url_for('home')}}">Home</a></li>
+			<li><a href="{{url_for('history')}}">History</a></li>
+	
+        </ul>
+	</nav>
+
+    <div class="border">
+        <div class="img-border">
+            <a href="{{url_for('static', filename='img/aloe-vera.png')}}"><img src="{{url_for('static', filename='img/aloe-vera.png')}}" alt="Aloe Vera"> </a>
+        </div>
+        <div class="details-pos">
+            <h1 class="name">Calathea-Pintripe-Omata</h1>
+        <p class="price">₱399</p> 
+        <button type="button" id="buyModal">Buy</button>
+        </div>
+    </div>
+    
+    <div class="details-border">
+    <h3>Backgrounds</h3>
+    <ul>
+        <li>Calathea ornata is a houseplant with large dark green glossy leaves and striking white or pink stripes. Sometimes called the Pinstripe Calathea, this perennial evergreen plant grows in tropical regions of the world. Its large attractive stripy pink leaves make the calathea ornata a beautiful plant that livens up any room or office. Calatheas are houseplants that are easy to care for and thrive indoors.</li>
+        <li>There are over 300 calathea cultivars, and the calathea ornata is one of the largest species. Calatheas belong to the family Marantaceae and are closely related to prayer plants (marantas).
+            <br><br>
+            Sometimes calatheas are called prayer plants because they raise their leaves at night like prayer plants. In the evening, the leaves of calathea plants fold upright at the base of the stem, as if the plant is folding its leaves upward to pray. This process is called nyctinasty.
+            <br><br>
+            Sometimes the leaves of calatheas curl up from the outer edges inward toward the central vein because something is wrong in their environment. To prevent leaf curl make sure to keep your calathea plant in warm, humid and away from direct sunlight. Make sure your houseplant has partly moist soil.</li>
+    
+    </ul>
+    </div>
+
+    <div class=" instruction-border">
+    <h3>Instruction</h3>
+    <ol>
+        <li>Give your Calathea ornata medium to bright indirect light. This plant is a great option for a north-, east-, or west-facing window; the harsh direct light of a south-facing window can be too strong.</li>
+        <li>Calathea ornata will grow best in a loose, well-draining potting mix that holds onto moisture. A peat-based mix is ideal—you can make your own by combining 2 parts peat moss, 2 parts orchid bark, 2 parts perlite, and 1 part organic compost. Some growers prefer to use a ready-made potting mix designed for African violets for their calatheas.</li>
+        <li>Water your Calathea ornata consistently so that the soil stays moist but not soggy. Overwatering can cause root rot, which can kill the plant. Avoid letting the soil dry out beyond the top inch or so between waterings.</li>
+        <li>Keep this tropical plant in a place with moderate temperatures and lots of humidity. If your space is particularly dry, group your plant in with other plants in your collection to help create a more humid microclimate, or run a humidifier nearby to add moisture to the air.</li>
+        <li>Feed your Calathea ornata with an organic liquid houseplant fertilizer diluted to half strength every two weeks during spring and summer. Stop fertilizing in the fall, when the plant goes dormant for the winter. Resume fertilizing the following spring.</li>
+    </div>
+
+    <div class="youtube-pos">
+        <iframe width="400" height="250" src="https://www.youtube.com/embed/7oXCpLzh2xY?si=shTFhKeEQmTzthI6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <div class="google-pos">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d61957.82742933799!2d121.56122864330978!3d13.93690637462608!3m2!1i1024!2i768!4f13.1!2m1!1sany%20plant%20shop%20in%20lucena!5e0!3m2!1sen!2sph!4v1702214863820!5m2!1sen!2sph" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
+
+
+
+
+
+    <!----------------------Modal--------------------------->
+
+    
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+      
+          <form action="/submit_form" method="post">
+                <h2>Information</h2>
+                <br>
+              <label for="name">Name</label>
+              <input type="text"  name="name" id="name" required>
+              <br><br>
+              <label for="number">Number</label>
+              <input type="text"  name="number" id="number" required>
+              <br><br>
+              <label for="email">Email</label>
+              <input type="text"  name="email" id="email" required>
+              <br><br>  
+              <label for="plant">Plant</label>
+              <br>
+              <input type="text"  name="plant" id="plant" required readonly>
+              <br><br>
+              <label for="price">Price</label>
+              <br>
+              <input type="text"  name="price" id="price" required readonly>
+              <br> <br>
+              <label for="address">Address</label>
+              <input type="text"  name="address" id="address" >
+            
+              <br><br>
+              <button type="submit" id="submitModal" class="modalBtn">Submit</button>
+        </form>
+      
+        </div>
+      
+      </div>
+
+      
+    
+      <script src="{{url_for('static', filename='BuyModal.js')}}"></script>
+      
+</body>
+</html>

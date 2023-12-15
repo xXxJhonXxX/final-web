@@ -1,0 +1,67 @@
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>History</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='table.css') }}">
+        
+    </head>
+    <body>
+
+        <nav>
+            <label class="logo" >History</label>
+            <ul>
+                <li><a href="{{url_for('home')}}">Home</a></li>
+                <li><a class="active" href="{{url_for('history')}}">History</a></li>
+        
+            </ul>
+
+        </nav>
+        
+        <form method="post" action="/search">
+            <input type="text" name="search_term" id="searchInput" placeholder="Search...">
+            <button type="submit"><strong>Search</strong></button>
+        </form>
+
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Number</th>
+                <th>Email</th>
+                <th>Plant</th>
+                <th>Price</th>
+                <th>Address</th>
+                <th class="action">Action</th>
+            </tr>
+
+            {% for entry in entries %}
+                <tr>
+                    <td>{{ entry.name }}</td>
+                    <td>{{ entry.number }}</td>
+                    <td>{{ entry.email }}</td>
+                    <td>{{ entry.plant }}</td>
+                    <td>{{ entry.price }}</td>
+                    <td>{{ entry.address }}</td>
+                    <td> 
+                        <form method="post" action="{{ url_for('delete_entry', entry_index=loop.index0) }}">
+                        <button type="submit">Cancel Order</button>
+                    </form>
+                </td>
+                
+                </tr>
+            {% endfor %}
+        </table>
+
+        <!-- Add a link to navigate back to the home page -->
+    </body>
+
+  
+    </html>

@@ -1,0 +1,121 @@
+*{
+	margin: 0;
+}
+
+body{
+	background-color:#a9ecac ;
+}
+nav{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: montserrat;
+}
+nav{
+	background:#137716;
+	height: 80px;
+	width: 100%;
+}
+label.logo{
+	color: white;
+	font-size: 35px;
+	line-height: 80px;
+	padding: 0 100px;
+	font-weight: bold;
+}
+nav ul{
+	float: right;
+	margin-right: 20px;
+}
+
+nav ul li{
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px;
+}
+nav ul li a{ 
+	color: white;
+	font-size: 17px;
+	padding: 7px 13px;
+	border-radius:	3px;
+	text-transform: uppercase;
+}
+a.active,a:hover{
+	background: #5ceb8c;
+	transition: .5s;
+}
+
+
+ody {
+    background-color: #f8f9fa; /* Set a light background color for the whole page */
+}
+
+h2 {
+    color: #28a745; /* Set a green color for the heading */
+}
+
+.container {
+    margin-top: 20px;
+}
+
+/* Style for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.action{
+    width: 150px;
+}
+
+th, td {
+    border: 1px solid #28a745; /* Green border for table cells */
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #28a745; /* Green background for table header */
+    color: #ffffff; /* White text for table header */
+}
+
+/* Style for the search bar */
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type=text] {
+    padding: 12px;
+    margin: 5px;
+    width: 200px;
+}
+
+button {
+    background-color: #28a745; /* Green background for buttons */
+    color: #ffffff; /* White text for buttons */
+    padding: 12px 18px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Style for the create button */
+.btn-primary {
+    background-color: #28a745; /* Green background for the create button */
+    color: #ffffff; /* White text for the create button */
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #218838; /* Darker green on hover for the create button */
+}

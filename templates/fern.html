@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='aloe-vera.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='BuyModal.css') }}">
+</head>
+<body>
+
+    <nav>
+		<label class="logo" >Inventory</label>
+		<ul>
+			<li><a class="active" href="{{url_for('home')}}">Home</a></li>
+			<li><a href="{{url_for('history')}}">History</a></li>
+	
+        </ul>
+	</nav>
+
+    <div class="border">
+        <div class="img-border">
+            <a href="{{url_for('static', filename='img/baston-fern.png')}}"><img src="{{url_for('static', filename='img/baston-fern.png')}}" alt="Boston Fern"> </a>
+        </div>
+        <div class="details-pos">
+        <h1 class="name">Boston Fern</h1>
+        <p class="price">₱300</p> 
+        <button type="button" id="buyModal">Buy</button>
+        </div>
+    </div>
+    
+    <div class="details-border">
+    <h3>Backgrounds</h3>
+    <ul>
+        <li>Boston fern (Nephrolepis exaltata), also known as sword fern, is a popular fern species that grows in many tropical areas around the world. In North America, it is considered a classic houseplant and is easy to care for, as it doesn’t require a lot of sunlight. Outdoors, this plant thrives in swampy, humid, and forested areas, and makes a good choice for partial-shade gardens in places like Southern California or Florida. Its sword-shaped, blue-green foliage contains tiny leaflets and grows erect, arching only when fronds grow larger. Like several other fern species, Boston fern is a slow grower and is best planted outdoors in the fall or spring or indoors year-round.</li>
+        <li><b> Common Names: </b>Boston fern, sword fern, ladder fern, boss fern</li>
+    </div>
+
+    <div class=" instruction-border">
+    <h3>Instruction</h3>
+    <ol>
+        <li>
+            Gather your potting supplies. Boston ferns will do best in a potting mixture of peat moss, sand, and garden soil. You can buy all of these at your local gardening store. Your final mixture should be even parts of each ingredient.[1] The pot should be big enough for your fern to sit comfortably without it's roots being near the drainage holes, but without a lot of extra space that could accumulate "root rot."</li>
+        <li>Pot your fern. Put your mixture and plant into the clean pot with drainage holes in the bottom.The fern can be planted about half of the way to the top of the pot so that the roots have space in the soil. Fill in the rest of the pot with more potting mixture, leaving about 1 inch( 25.4 mm) of space from the top</li>
+        <li>
+            Place your fern outdoors in a warm, humid environment.[4] In many places, the summers are warm and humid enough to provide the perfect environment for a Boston fern. They do best in environments with humidity levels of at least 50 percent. If your daytime temperatures are between 65 to 75 degrees Fahrenheit (18 to 24 degrees Celsius), and your nighttime temperatures are between 55 and 65 degrees Fahrenheit (13 to 18 degrees Celsius), your Boston ferns will thrive outdoors.[5] You can place them on your porch or patio, and they should do well.
+            The cooler temperatures at night will help to prevent fungus from developing.</li>
+        <li>Put your Boston fern in an appropriate room indoors. If you are keeping your Boston fern indoors, whether permanently or just for the winter months, you will need to be careful about making sure it has adequate humidity. The very best thing to do is to place it in a room with a humidifier. Keep your house between 65 to 75 degrees Fahrenheit (18 to 24 degrees Celsius), and put it in a cooler room at night.[6]</li>
+        <li>Provide your fern with low to moderate indirect sunlight.[7] Boston ferns do best when receiving indirect, filtered sunlight. If they’re outdoors, place them somewhere where they will get sunlight through tree branches, or cracks in a porch roof. If they’re indoors, place them near a window. You don’t want your fern to be in shade, but you don’t want them to be in direct sunlight. It’s a delicate balance</li>
+    
+    </ol> 
+    
+    </div>
+
+    <div class="youtube-pos">
+        <iframe width="400" height="250" src="https://www.youtube.com/embed/5n4CjwGRw54?si=J-DxHuxQ4VipHlv6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <div class="google-pos">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d61957.82742933799!2d121.56122864330978!3d13.93690637462608!3m2!1i1024!2i768!4f13.1!2m1!1sany%20plant%20shop%20in%20lucena!5e0!3m2!1sen!2sph!4v1702214863820!5m2!1sen!2sph" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
+
+
+
+
+
+    <!----------------------Modal--------------------------->
+
+    
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+      
+          <form action="/submit_form" method="post">
+                <h2>Information</h2>
+                <br>
+              <label for="name">Name</label>
+              <input type="text"  name="name" id="name" required>
+              <br><br>
+              <label for="number">Number</label>
+              <input type="text"  name="number" id="number" required>
+              <br><br>
+              <label for="email">Email</label>
+              <input type="text"  name="email" id="email" required>
+              <br><br>  
+              <label for="plant">Plant</label>
+              <br>
+              <input type="text"  name="plant" id="plant" required readonly>
+              <br><br>
+              <label for="price">Price</label>
+              <br>
+              <input type="text"  name="price" id="price" required readonly>
+              <br> <br>
+              <label for="address">Address</label>
+              <input type="text"  name="address" id="address" >
+            
+              <br><br>
+              <button type="submit" id="submitModal" class="modalBtn">Submit</button>
+        </form>
+      
+        </div>
+      
+      </div>
+
+      
+    
+      <script src="{{url_for('static', filename='BuyModal.js')}}"></script>
+      
+</body>
+</html>

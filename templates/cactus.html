@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='aloe-vera.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='BuyModal.css') }}">
+</head>
+<body>
+
+    <nav>
+		<label class="logo" >Inventory</label>
+		<ul>
+			<li><a class="active" href="{{url_for('home')}}">Home</a></li>
+			<li><a href="{{url_for('history')}}">History</a></li>
+	
+        </ul>
+	</nav>
+
+    <div class="border">
+        <div class="img-border">
+            <a href="{{url_for('static', filename='img/aloe-vera.png')}}"><img src="{{url_for('static', filename='img/aloe-vera.png')}}" alt="Aloe Vera"> </a>
+        </div>
+        <div class="details-pos">
+        <h1 class="name">Cactus</h1>
+        <p class="price">₱199</p> 
+        <button type="button" id="buyModal">Buy</button>
+        </div>
+    </div>
+    
+    <div class="details-border">
+    <h3>Backgrounds</h3>
+    <ul>
+        <li>Cactus, (family Cactaceae), flowering plant family (order Caryophyllales) with nearly 2,000 species and 139 genera. Cacti are native through most of the length of North and South America, from British Columbia and Alberta southward; the southernmost limit of their range extends far into Chile and Argentina. Mexico has the greatest number and variety of species. The only cacti possibly native to the Old World are members of the genus Rhipsalis, occurring in East Africa, Madagascar, and Sri Lanka. Although a few cactus species inhabit tropical or subtropical areas, most live in and are well adapted to dry regions. See also list of plants in the family Cactaceae.</li>
+        <li>Cacti are succulent perennial plants. Cacti generally have thick herbaceous or woody chlorophyll-containing stems. Cacti can be distinguished from other succulent plants by the presence of areoles, small cushionlike structures with trichomes (plant hairs) and, in almost all species, spines or barbed bristles (glochids). Areoles are modified branches, from which flowers, more branches, and leaves (when present) may grow.</li>
+    
+    </ul>
+    </div>
+
+    <div class=" instruction-border">
+    <h3>Instruction</h3>
+    <ol>
+        <li>To make sure your cactus gets the light it needs, place it near a window that receives at least 6 hours of bright light per day. Rotate your cactus plant periodically so that all sides receive sunlight equally and the growth is equal. Ideally, you want to place your cacti in a south-facing window, as these receive the most light. Avoid dark corners that do not receive any sunlight.
+            <br><br>
+            If you find that your cacti are not getting enough light despite being in front of a window, or you want to keep them somewhere in your house that does not receive light, consider getting a grow lamp. This way, you can be sure your cactus is getting the light it needs wherever you decide to keep it. I use a grow lamp indoors for my cacti and they seem to love it!</li>
+        <li>It is so important to remember cacti do not need as much water as normal houseplants. In fact, cactus plants need periods of drought in order to survive. Overwatering is one of the most common causes of cactus death.
+            <br><br>
+            Watering cacti can be tricky since overwatering can lead to rot. Rot starts at the roots and spreads upwards to the rest of the plant. Unfortunately, by the time you see signs of rot above ground, many of the roots are already dead and your cactus may not be able to be saved. Therefore, it is important to water appropriately from the start so you do not have this problem.
+            <br><br>
+            In general, cacti planted indoors should be watered about once a month. If your cactus is planted outdoors and you are in a hot, dry climate, it will need to be watered more frequently (around once every week or two). Before watering, check the moisture in the top few inches of soil: they should be completely dried out before you water again.</li>
+        <li>Since cacti are native to the desert, it is natural that they enjoy warm, dry temperatures. Cacti like temperatures of about 70 – 90 °F (21 – 32 °C) in the summer and around 50 – 55 °F (10 – 13 °C) in winter months. Do not leave cacti in temperatures colder than that because they could get frostbite.
+            <br><br>
+            Avoid keeping cacti in rooms that can get humid (such as bathrooms) as that can lead to rot.
+            <br><br>
+            Pay careful attention to the temperature when deciding how much to water. Hot, dry climates will require more frequent watering (about twice a month) compared to colder climates (about once a month).</li>
+        <li>The best types of pots for cacti are plain terracotta pots with drainage holes. These work best because they do not retain extra water – cacti hate staying wet for too long. These pots help the soil dry out faster and are much more forgiving if you water too often.
+            <br><br>
+        I recommend staying away from glass containers, and not planting cacti in terrariums when starting out because these can retain moisture for a long time. Once you have a better idea of a good watering schedule that works for your cacti, you can try these out, but in the beginning, terracotta work great!
+        <br><br>
+        It is important for cacti to be planted in a well draining, porous soil that does not retain water. Typical gardening soil for houseplants usually retains too much moisture for cacti and should not be used. I use a 70:30 ratio of succulent soil to perlite and find that that works best.</li>
+    </div>
+
+    <div class="youtube-pos">
+        <iframe width="400" height="250" src="https://www.youtube.com/embed/Y4cl-IDqM_M?si=GIzzZKA_Ih67NTp6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <div class="google-pos">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d61957.82742933799!2d121.56122864330978!3d13.93690637462608!3m2!1i1024!2i768!4f13.1!2m1!1sany%20plant%20shop%20in%20lucena!5e0!3m2!1sen!2sph!4v1702214863820!5m2!1sen!2sph" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
+
+
+
+
+
+    <!----------------------Modal--------------------------->
+
+    
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+      
+          <form action="/submit_form" method="post">
+                <h2>Information</h2>
+                <br>
+              <label for="name">Name</label>
+              <input type="text"  name="name" id="name" required>
+              <br><br>
+              <label for="number">Number</label>
+              <input type="text"  name="number" id="number" required>
+              <br><br>
+              <label for="email">Email</label>
+              <input type="text"  name="email" id="email" required>
+              <br><br>  
+              <label for="plant">Plant</label>
+              <br>
+              <input type="text"  name="plant" id="plant" required readonly>
+              <br><br>
+              <label for="price">Price</label>
+              <br>
+              <input type="text"  name="price" id="price" required readonly>
+              <br> <br>
+              <label for="address">Address</label>
+              <input type="text"  name="address" id="address" >
+            
+              <br><br>
+              <button type="submit" id="submitModal" class="modalBtn">Submit</button>
+        </form>
+      
+        </div>
+      
+      </div>
+
+      
+    
+      <script src="{{url_for('static', filename='BuyModal.js')}}"></script>
+      
+</body>
+</html>

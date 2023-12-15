@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plants for Sale</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    
+</head>
+
+<body>
+
+	<nav>
+		<label class="logo" >Plants for Sale</label>
+		<ul>
+			<li><a class="active" href="{{url_for('home')}}">Home</a></li>
+			<li><a href="{{url_for('history')}}">History</a></li>
+	
+        </ul>
+
+	</nav>
+
+ 
+
+    <main class="row">
+
+        <div class="column">
+            <a href="{{url_for('aloe_vera')}}">
+                <img src="{{url_for('static', filename='img/aloe-vera.png')}}" alt="Aloe Vera">
+            </a>
+            <p class="plant-name">Aloe vera</p>
+            <p class="plant-price">₱149.00</p>
+        </div>
+
+		<div class="column">
+			<a href="{{url_for('bacularis')}}">
+			<img src="{{url_for('static', filename='img/bacularis.png')}}" alt="Bacularis">
+			
+				<p>Bacularis</p>
+				<p>₱179.00</p>
+		</div>
+
+		<div class="column">
+			<a href="{{url_for('fern')}}">
+			<img src="{{url_for('static', filename='/img/baston-fern.png')}}" alt="Baston Fern">
+			</a>
+				<p>Boston Fern</p>
+				<p>₱300.00</p>
+		</div>
+
+		<div class="column">
+			<a href="{{url_for('boncel')}}">
+			<img src="{{url_for('static', filename='img/boncel.png')}}" alt="Boncel">
+			</a>
+				<p>Boncel</p>
+				<p>₱240</p>
+		</div>
+
+
+		<div class="column">
+			<a href="{{url_for('cactus')}}">
+				<img src="{{url_for('static', filename='img/cactus.png')}}" alt="Cactus">
+			</a>
+				<p>Cactus</p>
+				<p>₱199</p>
+		</div>
+
+		<div class="column">
+			<a href="{{url_for('omata')}}">
+				<img src="{{url_for('static', filename='img/calathea-pintripe-omata.png')}}" alt="calathea-pintripe-omata">
+			</a>
+				<p>Calathea Pintripe Omata</p>
+				<p>₱399</p>
+		</div>
+		
+
+	</div>
+
+
+
+</body>
+</html>
